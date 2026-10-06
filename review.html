@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PDV Mogo → iFood — Revisão</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header id="rv-header">
+    <div>
+      <h1>PDV Mogo → iFood — Revisão</h1>
+      <p id="rv-meta" class="rv-muted">Capture os cadastros na Mogo e leia o cardápio do iFood.</p>
+    </div>
+    <div id="rv-actions">
+      <button id="scan" class="rv-btn-safe">Ler cardápio do iFood</button>
+      <button id="refresh" class="rv-btn-safe">Atualizar captura Mogo</button>
+      <div id="rv-apply-wrap">
+        <button id="rv-btn-apply" disabled>⚠️ Aplicar selecionados</button>
+        <div class="rv-apply-hint">preenche e salva no cardápio do iFood</div>
+      </div>
+    </div>
+  </header>
+
+  <div id="rv-summary-bar"></div>
+
+  <nav id="rv-tabs">
+    <button type="button" class="rv-tab-btn is-active" data-tab="option">Complementos</button>
+    <button type="button" class="rv-tab-btn" data-tab="product">Produtos pai 🍕</button>
+  </nav>
+
+  <main id="rv-main">
+    <p id="rv-empty" class="rv-muted">Nenhuma análise disponível. Clique em “Ler cardápio do iFood”.</p>
+  </main>
+
+  <div id="rv-final-summary" style="display:none"></div>
+  <div id="rv-progress" hidden>
+    <div class="rv-progress-card">
+      <div class="rv-spinner"></div>
+      <strong id="rv-progress-title">Preenchendo códigos...</strong>
+      <span id="rv-progress-detail">Aguarde a conclusão.</span>
+    </div>
+  </div>
+  <script src="review.js"></script>
+</body>
+</html>
