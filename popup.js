@@ -77,10 +77,14 @@ document.getElementById('export').addEventListener('click', async () => {
 
 document.getElementById('ifood').addEventListener('click', async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!/^https:\/\/portal\.ifood\.com\.br\/menu\/list\/pdv/.test(tab?.url || '')) {
-    showStatus('Abra primeiro Cardápio > Integração com PDV no Portal iFood.', 'err');
+  const url = tab?.url || '';
+  const isIfood = /^https:\/\/portal\.ifood\.com\.br\/menu\/list\/pdv/.test(url);
+  const isMultipedidos = /^https:\/\/app\.multipedidos\.com\.br\/#!/.test(url);
+  if (!isIfood && !isMultipedidos) {
+    showStatus('Abra o Portal iFood em Integração com PDV ou o Multipedidos no Editor de Produtos/Cardápio.', 'err');
     return;
   }
+  await chrome.storage.local.set({ mogoReviewProvider: isMultipedidos ? 'multipedidos' : 'ifood', mogoTargetTabId: tab.id, mogoTargetTabUrl: url });
   await chrome.tabs.create({ url: chrome.runtime.getURL('review.html') });
 });
 

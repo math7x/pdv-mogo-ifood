@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "PDV Mogo → iFood",
-  "version": "0.1.0",
-  "description": "Captura códigos da Mogo por ativação manual e prepara a vinculação com o iFood.",
+  "name": "PDV Mogo → iFood e Multipedidos",
+  "version": "0.2.17",
+  "description": "Captura códigos da Mogo por ativação manual e prepara a vinculação com iFood e Multipedidos.",
   "permissions": ["activeTab", "scripting", "storage", "tabs"],
-  "host_permissions": ["https://portal.ifood.com.br/menu/list/pdv*"],
+  "host_permissions": ["https://portal.ifood.com.br/menu/list/pdv*", "https://app.multipedidos.com.br/*"],
   "optional_host_permissions": ["http://*/*", "https://*/*"],
   "action": {
-    "default_title": "PDV Mogo → iFood",
+    "default_title": "PDV Mogo → iFood e Multipedidos",
     "default_popup": "popup.html"
   }
 }

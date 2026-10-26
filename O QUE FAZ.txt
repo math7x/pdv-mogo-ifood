@@ -1,0 +1,3 @@
+﻿Extensão - vincular códigos PDV da Mogo ao iFood e Multipedidos
+
+Lê IDs exibidos nas telas da Mogo, compara produtos e adicionais com iFood ou Multipedidos e permite preencher códigos após revisão. O README.md explica como capturar cada tela e conferir as correspondências.

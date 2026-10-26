@@ -1,6 +1,6 @@
-# PDV Mogo → iFood
+# PDV Mogo → iFood e Multipedidos
 
-Extensão Chrome/Brave para capturar manualmente os IDs visíveis nas telas de cadastro da Mogo, comparar com o cardápio PDV do iFood e preencher os códigos após sua revisão.
+Extensão Chrome/Brave para capturar manualmente os IDs visíveis nas telas de cadastro da Mogo, comparar com o iFood ou Multipedidos e preencher os códigos após sua revisão.
 
 ## Instalação
 
@@ -30,12 +30,21 @@ Essas convenções seguem o [tutorial da Mogo para vincular produtos no iFood](h
 
 Correspondências são pré-selecionadas somente quando o nome é muito próximo e não há outro candidato parecido. Sugestões aproximadas aparecem desmarcadas. O botão de aplicar preenche os campos selecionados; confirme o resultado e use o controle de salvar do próprio iFood.
 
+## Vincular no Multipedidos
+
+1. Capture os produtos, adicionais e opções na Mogo com os IDs visíveis.
+2. Abra o **Editor de Produtos** do Multipedidos ou a tela de edição de complementos/opções.
+3. No menu da extensão, clique em **Abrir revisão do iFood / Multipedidos** e depois em **Ler Multipedidos**.
+4. Revise as sugestões, marque somente as linhas certas e clique em **Aplicar no Multipedidos**.
+
+No Multipedidos, tanto produtos pai quanto complementos usam o ID numérico da Mogo no campo **Código Externo** (sem os prefixos AD/PZ/S usados na vinculação com o iFood). Produtos pai são editados pelo menu do produto em **Editar > Editar códigos dos produtos**. Opções/complementos precisam estar abertos no editor para a extensão localizar o cartão e gravar o código.
+
 ## Conferência e privacidade
 
 - Os IDs capturados ficam no armazenamento local da extensão.
 - **Exportar captura para conferência** baixa um arquivo JSON para inspeção.
 - **Limpar captura** remove os dados locais da Mogo.
-- A extensão só lê a aba Mogo depois do botão manual e só acessa o portal iFood para a leitura/aplicação iniciada por você.
+- A extensão só lê a aba Mogo depois do botão manual e só acessa iFood ou Multipedidos quando você inicia a leitura/aplicação.
 
 ## Limite da captura
 
